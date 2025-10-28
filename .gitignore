@@ -1,0 +1,45 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+arm/
+arm64/
+build/
+bld/
+out/
+
+# Visual C++ cache files
+*.ipch
+*.aps
+*.ncb
+*.opendb
+
+# Compiled Object files
+*.ilk
+*.pdb
+*.exp
+*.lib
+*.dll
+*.exe
+*.manifest
+*.recipe
+
+# IntelliSense SQLite files
+*.db
+*.db-shm
+*.db-wal
+
+# Other
+Thumbs.db
+Desktop.ini
+*.log
