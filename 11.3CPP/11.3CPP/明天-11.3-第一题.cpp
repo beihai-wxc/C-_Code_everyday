@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <iomanip> // 格式化输出
+#include <iomanip> 
 
 using namespace std;
 
@@ -10,13 +10,14 @@ using namespace std;
 // n: 总共有多少个数（1~n）
 // r: 需要选多少个数
 void generateCombinations(vector<int>& current, int start, int n, int r) {
-    // 如果已经选了 r 个数，输出当前组合
+    // 基准情况：如果已经选了 r 个数，输出当前组合
     if (current.size() == r) {
-        cout << setw(3) << right << current[0]; // 第一个数字，无前缀
-        for (int i = 1; i < r; ++i) {
-            cout << " " << setw(3) << right << current[i]; // 后续：空格 + 数字
+        // 输出每个数字，占3位，右对齐
+        for (int i = 0; i < r; ++i) {
+            cout << setw(3) << right << current[i];
+            
         }
-        cout << "\n"; // 或 endl，但 "\n" 更干净
+        cout << endl;
         return;
     }
 
@@ -28,7 +29,7 @@ void generateCombinations(vector<int>& current, int start, int n, int r) {
     }
 }
 
-int main1() {
+int main() {
     int n, r;
     cin >> n >> r;
 
@@ -37,4 +38,3 @@ int main1() {
 
     return 0;
 }
-
