@@ -12,12 +12,11 @@ using namespace std;
 void generateCombinations(vector<int>& current, int start, int n, int r) {
     // 如果已经选了 r 个数，输出当前组合
     if (current.size() == r) {
-        // 输出每个数字，sew()占3位，right右对齐
-        for (int i = 0; i < r; ++i) {
-            cout << setw(3) << right << current[i];     
-            if (i != r - 1) cout << " "; // 最后一个数字前的数字之间加空格
+        cout << setw(3) << right << current[0]; // 第一个数字，无前缀
+        for (int i = 1; i < r; ++i) {
+            cout << " " << setw(3) << right << current[i]; // 后续：空格 + 数字
         }
-        cout << endl;
+        cout << "\n"; // 或 endl，但 "\n" 更干净
         return;
     }
 
@@ -29,7 +28,7 @@ void generateCombinations(vector<int>& current, int start, int n, int r) {
     }
 }
 
-int main() {
+int main1() {
     int n, r;
     cin >> n >> r;
 
@@ -38,3 +37,4 @@ int main() {
 
     return 0;
 }
+
